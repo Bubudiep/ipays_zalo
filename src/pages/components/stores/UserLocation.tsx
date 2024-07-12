@@ -5,6 +5,9 @@ import {
   getLocation,
   getSetting,
 } from "zmp-sdk/apis";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import * as icon from "@fortawesome/free-solid-svg-icons";
 
 type OptionType = {
   method: string;
@@ -171,17 +174,24 @@ const UserLocation = () => {
   }, []);
 
   if (pending) {
-    return <div>Đang lấy vị trí...</div>;
+    return <div>Đang định vị...</div>;
   }
   if (!userData) {
     return (
       <div className="location" onClick={handleClick}>
-        Cho phép app truy cập vị trí!
+        Cho phép ứng truy cập vị trí!
       </div>
     );
   }
 
-  return <div className="user-location">{userData["display_name"]}</div>;
+  return (
+    <div className="user-location">
+      <FontAwesomeIcon icon={icon.faLocationDot} />{" "}
+      {userData["display_name"].split(",")[0] +
+        ", " +
+        userData["display_name"].split(",")[1]}
+    </div>
+  );
 };
 
 export default UserLocation;
