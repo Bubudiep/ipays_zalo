@@ -16,14 +16,14 @@ const botItems: botItemType[] = [
     link: "/home/",
   },
   {
-    icon: <FontAwesomeIcon icon={icon.faStore} />,
-    name: "Gian hàng",
-    link: "/store/",
-  },
-  {
     icon: <FontAwesomeIcon icon={icon.faChartSimple} />,
     name: "Báo cáo",
     link: "/report/",
+  },
+  {
+    icon: <FontAwesomeIcon icon={icon.faStore} />,
+    name: "Gian hàng",
+    link: "/store/",
   },
   {
     icon: <FontAwesomeIcon icon={icon.faUser} />,
@@ -50,8 +50,8 @@ const HomePage: React.FunctionComponent = () => {
             }
           >
             <button>
-              {item.icon}
-              {item.name}
+              <div className="icon">{item.icon}</div>
+              <div className="txt">{item.name}</div>
             </button>
           </Link>
         ))}
