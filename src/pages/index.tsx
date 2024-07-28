@@ -16,15 +16,15 @@ const botItems: botItemType[] = [
     link: "/home/",
   },
   {
-    icon: <FontAwesomeIcon icon={icon.faChartSimple} />,
-    name: "Báo cáo",
+    icon: <FontAwesomeIcon icon={icon.faGears} />,
+    name: "Thiết lập",
     link: "/report/",
   },
-  {
-    icon: <FontAwesomeIcon icon={icon.faStore} />,
-    name: "Gian hàng",
-    link: "/store/",
-  },
+  // {
+  //   icon: <FontAwesomeIcon icon={icon.faStore} />,
+  //   name: "Gian hàng",
+  //   link: "/store/",
+  // },
   {
     icon: <FontAwesomeIcon icon={icon.faUser} />,
     name: "Tài khoản",

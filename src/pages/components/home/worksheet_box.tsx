@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Nguonthunhap from "./nguonthunhap";
+import Bangcong from "./worksheet/bangcong";
 import Nguonthu from "./nguonthu";
 import Nguonchi from "./nguonchi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,21 +12,24 @@ import CountUp from 'react-countup';
 const mydata = [
   {
     id: 0,
-    name: "Nguồn thu nhập",
+    name: "Bảng công",
+    icon: "",
     tab: "1",
   },
   {
     id: 1,
-    name: "Khoản thu",
+    name: "Chi tiết",
+    icon: "",
     tab: "2",
   },
   {
     id: 2,
-    name: "Khoản chi",
+    name: `Cài đặt `,
+    icon: <FontAwesomeIcon icon={icon.faSliders} />,
     tab: "3",
   },
 ];
-const Moneybox = () => {
+const WorksheetBox = () => {
   const [tab, setTab] = useState("1");
   const [active, setActive] = useState(0);
   const onClick = (id) => {
@@ -52,13 +55,13 @@ const Moneybox = () => {
                 }}
                 className={val.id === active ? "active" : "deactive"}
               >
-                {val.name}
+                <div className="name">{val.name}</div>
               </li>
             );
           })}
         </ul>
         <div className="tab-content">
-          {tab === "1" && <Nguonthunhap />}
+          {tab === "1" && <Bangcong />}
           {tab === "2" && <Nguonthu />}
           {tab === "3" && <Nguonchi />}
         </div>
@@ -67,4 +70,4 @@ const Moneybox = () => {
   );
 };
 
-export default Moneybox;
+export default WorksheetBox;
