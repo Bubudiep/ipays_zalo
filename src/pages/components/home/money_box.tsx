@@ -38,7 +38,7 @@ const Moneybox = () => {
       {/* <div className="title">Tổng tài sản</div> */}
       <div className={`money ${money > 0 ? "up" : "down"}`}>
         <div className="icon"><img src={moneyDefaultIcon} /></div>
-        <div className="txt">{money.toLocaleString()}</div>
+        <div className="txt">{money.toLocaleString()} VND</div>
       </div>
       <div className="user-options">
         <ul>

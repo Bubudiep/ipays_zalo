@@ -36,6 +36,51 @@ html {
           }
         }
       }
+      .user_configuration{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0509803922);
+        padding: 7px;
+        display: flex;
+        .preview_container{
+          display: flex;
+          flex: 1;
+          align-items: center;
+          gap: 5px;
+          .items{
+            color: #999;
+            display: flex;
+            gap: 5px;
+            font-size: 0.8rem;
+            border: 1px solid #d4d4d4;
+            padding: 3px 7px;
+            border-radius: 7px;
+            svg{
+              font-size: 0.7rem;
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input{
+              width: 20px;
+              border: hidden;
+              outline: none;
+              border-bottom: 1px solid #d4d4d4;
+              text-align: right
+            }
+          }
+        }
+        .view_more{
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+        }
+      }
       .user_dashboard{
         display: flex;
         gap: 10px;
@@ -83,6 +128,45 @@ html {
           .user-info {
             display: flex;
             gap: 20px;
+            .userConfiguration{
+              max-width: 80px;
+              display: flex;
+              flex-direction: column;
+              display: flex;
+              flex: 1;
+              margin-left: auto;
+              .box-content{
+                display: flex;
+                flex: 1;
+                align-items: center;
+                flex-direction: column;
+                .icon{
+                  display: flex;
+                  flex: 1;
+                  align-items: center;
+                  justify-content: center;
+                  width: 30px;
+                  img {
+                    width: 100%;
+                  }
+                }
+                .text{
+                  white-space: nowrap;
+                  font-size: 0.7rem;
+                  width: 80px;
+                  justify-content: center;
+                  display: flex;
+                  &.day{
+                    color: rgb(255, 217, 0);
+                    text-shadow: 1px 2px 3px rgb(255 0 0 / 20%);
+                  }
+                  &.night{
+                    color: rgb(55, 54, 107);
+                    text-shadow: 1px 2px 3px #0003;
+                  }
+                }
+              }
+            }
             .avatar {
               display: flex;
               align-items: center;
@@ -111,7 +195,11 @@ html {
                 display: flex;
                 font-size: 0.8rem;
                 gap: 5px;
+                color: #999;
                 .box {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
                   border-radius: 5px;
                   padding: 0px 5px;
                   border: 1px solid #999;
@@ -193,23 +281,23 @@ html {
           padding: 0;
           overflow: hidden;
           font-size: 0.8rem;
+          display: flex;
+          justify-content: space-around;
           li {
-            float: left;
-            padding: 3px 10px 3px 0px;
+            text-align: center;
+            padding: 3px 0px;
+            width: 30%;
             color: #999;
             transition: all 0.2s;
             cursor: pointer;
             user-select: none;
             border-bottom: 1px solid transparent;
-            &:first-child {
-              padding-left: 0px;
-            }
             &:hover {
               color: #000;
             }
             &.active {
               color: #000;
-              border-bottom: 1px solid #999;
+              border-bottom: 1px solid #cbcbcb;
             }
           }
         }
@@ -366,6 +454,16 @@ html {
         padding: 3px 0px;
         font-size: 1.4rem;
         gap: 5px;
+        .xt{
+          font-weight: 600;
+          font-size: 14px;
+          &.down{
+            color: rgb(197, 58, 3);
+          }
+          &.up{
+            color: green;
+          }
+        }
         &.up{
           color: #000000;
         }
@@ -378,13 +476,6 @@ html {
           overflow: hidden;
           img{
             width: 100%;
-          }
-        }
-        .txt{
-          display: flex;
-          gap: 5px;
-          &::after {
-            content: " VND";
           }
         }
       }
@@ -502,4 +593,7 @@ html {
     transform: translateY(0);
     opacity: 1;
   }
+}
+::-webkit-scrollbar {
+  width: 0px;
 }

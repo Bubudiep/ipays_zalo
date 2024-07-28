@@ -20,7 +20,7 @@ const feedList = [
   },
   {
     id: 2,
-    name: "Ngày đi muộn",
+    name: "Đi làm ngày nghỉ",
     data: 1,
     unit: "ngày",
     data2: "2",
