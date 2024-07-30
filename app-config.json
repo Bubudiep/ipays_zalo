@@ -1,14 +1,14 @@
 {
   "app": {
     "title": "ipays",
-    "headerTitle": "IPAYS",
-    "headerColor": "#1843EF",
+    "headerTitle": "iPays",
+    "headerColor": "",
     "textColor": "white",
     "textAlign": "left",
     "statusBarColor": "#1843EF",
-    "leftButton": "back",
-    "statusBar": "normal",
-    "actionBarHidden": false,
+    "leftButton": "none",
+    "statusBar": "transparent",
+    "actionBarHidden": true,
     "hideAndroidBottomNavigationBar": false,
     "hideIOSSafeAreaBottom": false
   },

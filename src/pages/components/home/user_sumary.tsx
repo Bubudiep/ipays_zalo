@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 const feedList = [
   {
@@ -35,11 +35,13 @@ const UserSumary = () => {
           <div className="items" key={index}>
             <div className="data">
               <div className="value">
-                <CountUp 
-                duration={0.5} 
-                decimals={0}
-                separator=" " delay={0}
-                end={val.data} />
+                <CountUp
+                  duration={0.5}
+                  decimals={0}
+                  separator=" "
+                  delay={0}
+                  end={val.data}
+                />
               </div>
             </div>
             <div className="title">{val.name}</div>

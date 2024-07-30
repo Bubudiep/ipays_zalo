@@ -24,7 +24,7 @@ html {
       overflow: hidden;
       flex-direction: column;
       .main-body {
-        padding: 10px 5px 5px 5px;
+        padding: 10px 7px 5px 7px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -36,26 +36,63 @@ html {
           }
         }
       }
-      .user_configuration{
+      .view_more {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #464646;
+        flex-direction: column;
+        gap: 0px;
+        font-size: 0.8rem;
+        .button {
+          margin-left: auto;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          svg {
+            font-size: 0.6rem;
+            padding: 10px 5px 10px 10px;
+            border-left: 1px solid #e8e8e8;
+          }
+          border-radius: 5px;
+          background-color: #fff;
+          padding: 0px 8px;
+          box-shadow: 1px 2px 3px #0003;
+        }
+      }
+      .user_configuration {
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0509803922);
         padding: 7px;
         display: flex;
-        .preview_container{
+        position: relative;
+        font-size: 0.8rem;
+        .preview_container {
           display: flex;
           flex: 1;
-          align-items: center;
-          gap: 5px;
-          .items{
+          .items {
             color: #999;
             display: flex;
-            gap: 5px;
-            font-size: 0.8rem;
-            border: 1px solid #d4d4d4;
-            padding: 3px 7px;
-            border-radius: 7px;
-            svg{
+            flex: 1;
+            justify-content: center;
+            padding: 5px;
+            align-items: center;
+            padding-left: 5px;
+            .txt {
+              display: flex;
+              gap: 5px;
+            }
+            .actions {
+              display: flex;
+              margin-left: auto;
+              align-items: center;
+              gap: 5px;
+              border-radius: 7px;
+              border: 1px solid #d4d4d4;
+              padding: 3px 7px;
+            }
+            svg {
               font-size: 0.7rem;
             }
             input::-webkit-outer-spin-button,
@@ -63,30 +100,29 @@ html {
               -webkit-appearance: none;
               margin: 0;
             }
-            input{
+            input {
               width: 20px;
               border: hidden;
               outline: none;
               border-bottom: 1px solid #d4d4d4;
-              text-align: right
+              text-align: right;
             }
           }
         }
-        .view_more{
-          width: 30px;
-          height: 30px;
+        .view_more {
+          gap: 5px;
           display: flex;
           align-items: center;
-          justify-content: center;
           color: #999;
+          user-select: none;
         }
       }
-      .user_dashboard{
+      .user_dashboard {
         display: flex;
         gap: 10px;
         flex: 1;
         justify-content: space-between;
-        .items{
+        .items {
           display: flex;
           flex-direction: column;
           background-color: #fff;
@@ -96,13 +132,13 @@ html {
           box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0509803922);
           padding: 10px 10px 5px 10px;
           gap: 2px;
-          .title{
+          .title {
             font-size: 0.7rem;
             display: flex;
             justify-content: center;
             color: #555;
           }
-          .data{
+          .data {
             display: flex;
             font-size: 1.3rem;
             font-weight: 600;
@@ -117,51 +153,58 @@ html {
         gap: 10px;
         z-index: 10;
         .user-card {
-          background-color: #fff;
+          color: #fff;
           border-radius: 0px 0px 10px 10px;
           padding: 7px 10px;
           box-shadow: 1px 2px 3px #0003;
           gap: 15px;
-          height: 65px;
+          height: 85px;
           display: flex;
           flex-direction: column;
+          &.day {
+            background-color: #00a1ff;
+          }
+          &.night {
+            background-color: #272a2d;
+          }
           .user-info {
             display: flex;
-            gap: 20px;
-            .userConfiguration{
-              max-width: 80px;
+            margin-top: auto;
+            .zalo_btn {
+              display: flex;
+              flex: 1;
+            }
+            .userConfiguration {
               display: flex;
               flex-direction: column;
               display: flex;
-              flex: 1;
-              margin-left: auto;
-              .box-content{
+              .box-content {
                 display: flex;
-                flex: 1;
-                align-items: center;
                 flex-direction: column;
-                .icon{
+                justify-content: center;
+                align-items: center;
+                .icon {
                   display: flex;
                   flex: 1;
                   align-items: center;
                   justify-content: center;
-                  width: 30px;
+                  width: 35px;
                   img {
                     width: 100%;
                   }
                 }
-                .text{
+                .text {
                   white-space: nowrap;
                   font-size: 0.7rem;
                   width: 80px;
-                  justify-content: center;
                   display: flex;
-                  &.day{
+                  justify-content: center;
+                  &.day {
                     color: rgb(255, 217, 0);
                     text-shadow: 1px 2px 3px rgb(255 0 0 / 20%);
                   }
-                  &.night{
-                    color: rgb(55, 54, 107);
+                  &.night {
+                    color: rgba(255, 255, 255, 0.404);
                     text-shadow: 1px 2px 3px #0003;
                   }
                 }
@@ -170,11 +213,12 @@ html {
             .avatar {
               display: flex;
               align-items: center;
-              width: 50px;
-              min-width: 50px;
+              width: 40px;
+              min-width: 40px;
+              height: 40px;
               border-radius: 10px;
               overflow: hidden;
-              border: 3px solid #fff;
+              border: 2px solid #fff;
               box-shadow: 1px 2px 3px #00000030;
               img {
                 width: 100%;
@@ -185,24 +229,26 @@ html {
               flex-direction: column;
               justify-content: center;
               overflow: hidden;
-              gap: 5px;
+              gap: 0px;
+              flex: 1;
               .username {
+                white-space: nowrap;
                 font-size: 1.1rem;
                 display: flex;
                 font-weight: bold;
               }
               .userlevel {
                 display: flex;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 gap: 5px;
-                color: #999;
+                user-select: none;
                 .box {
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
                   border-radius: 5px;
                   padding: 0px 5px;
-                  border: 1px solid #999;
+                  border: 1px solid;
                 }
               }
               .location {
@@ -214,6 +260,12 @@ html {
                 overflow: hidden;
                 text-overflow: ellipsis;
               }
+            }
+          }
+          &.active {
+            height: 140px;
+            .user-info {
+              margin-top: auto;
             }
           }
         }
@@ -306,7 +358,7 @@ html {
           padding: 5px;
           color: #999;
           font-size: 0.8rem;
-          .lich-bangcong{
+          .lich-bangcong {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -329,12 +381,12 @@ html {
               max-width: 500px;
               width: 90%;
               animation: slideIn 0.3s ease-out;
-              .title{
+              .title {
                 display: flex;
                 align-items: center;
                 padding: 5px 10px;
                 box-shadow: 1px 1px 2px #0003;
-                .text{
+                .text {
                   display: flex;
                 }
                 .close {
@@ -346,14 +398,14 @@ html {
                   color: #a3a3a3;
                 }
               }
-              .details{
+              .details {
                 padding: 10px 20px 20px 20px;
-                table{
-                  tr{
-                    td{
+                table {
+                  tr {
+                    td {
                       border: hidden;
                       text-align: left;
-                      &:first-child{
+                      &:first-child {
                         white-space: nowrap;
                         font-weight: 600;
                         padding-right: 15px;
@@ -363,12 +415,12 @@ html {
                 }
               }
             }
-            .bangcong-thang{
+            .bangcong-thang {
               display: flex;
               font-size: 0.75rem;
               justify-content: center;
               height: 25px;
-              select{
+              select {
                 border: hidden;
                 outline: none;
                 font-size: 0.8rem;
@@ -379,24 +431,24 @@ html {
                 padding: 0px 2px;
                 background-color: transparent;
               }
-              button{
+              button {
                 outline: none;
                 width: 50px;
                 border: hidden;
                 border-radius: 5px;
               }
             }
-            table{
+            table {
               border-collapse: separate;
               border-spacing: 0px 0px;
-              th{
+              th {
                 font-size: 0.7rem;
                 font-weight: 600;
                 padding: 5px 0px;
                 width: 50px;
               }
-              tr{
-                td{
+              tr {
+                td {
                   user-select: none;
                   border: 1px solid #c1c1c1;
                   border-bottom: hidden;
@@ -404,37 +456,37 @@ html {
                   text-align: center;
                   height: 40px;
                   position: relative;
-                  &.active{
+                  &.active {
                     background-color: #eef5f0;
                     color: #333;
                   }
-                  svg{
+                  svg {
                     position: absolute;
                     right: 4px;
                     top: 4px;
                     color: #47c590;
                   }
-                  &:first-child{
+                  &:first-child {
                     border-left: 1px solid #c1c1c1;
                   }
                 }
-                &:first-child{
-                  td{
-                    &:first-child{
+                &:first-child {
+                  td {
+                    &:first-child {
                       border-top-left-radius: 5px;
                     }
-                    &:last-child{
+                    &:last-child {
                       border-top-right-radius: 5px;
                     }
                   }
                 }
-                &:last-child{
-                  td{
+                &:last-child {
+                  td {
                     border-bottom: 1px solid #c1c1c1;
-                    &:first-child{
+                    &:first-child {
                       border-bottom-left-radius: 5px;
                     }
-                    &:last-child{
+                    &:last-child {
                       border-bottom-right-radius: 5px;
                     }
                   }
@@ -454,27 +506,27 @@ html {
         padding: 3px 0px;
         font-size: 1.4rem;
         gap: 5px;
-        .xt{
+        .xt {
           font-weight: 600;
           font-size: 14px;
-          &.down{
+          &.down {
             color: rgb(197, 58, 3);
           }
-          &.up{
+          &.up {
             color: green;
           }
         }
-        &.up{
+        &.up {
           color: #000000;
         }
-        svg{
+        svg {
           font-size: 1.2rem;
         }
-        .icon{
+        .icon {
           width: 50px;
           height: 50px;
           overflow: hidden;
-          img{
+          img {
             width: 100%;
           }
         }
@@ -559,6 +611,12 @@ html {
 }
 .zaui-list-item {
   cursor: pointer;
+}
+.flex1 {
+  flex: 1;
+}
+.gap10 {
+  gap: 10px;
 }
 .gap5 {
   gap: 5px;
