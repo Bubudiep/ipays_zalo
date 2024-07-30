@@ -6,8 +6,8 @@ import Nguonchi from "./nguonchi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import * as icon from "@fortawesome/free-solid-svg-icons";
-import moneyDefaultIcon from '/src/img/icon/money-default.png';
-import CountUp from 'react-countup';
+import moneyDefaultIcon from "/src/img/icon/money-default.png";
+import CountUp from "react-countup";
 
 const mydata = [
   {
@@ -35,16 +35,18 @@ const WorksheetBox = () => {
   const onClick = (id) => {
     setActive(id);
   };
-  const money=9150500
-  const today_slr=50000
+  const money = 9150500;
+  const today_slr = 50000;
   return (
     <div className="user-dashboard">
       {/* <div className="title">Tổng tài sản</div> */}
       <div className={`money ${money > 0 ? "up" : "down"}`}>
-        <div className="icon"><img src={moneyDefaultIcon} /></div>
+        <div className="icon">
+          <img src={moneyDefaultIcon} />
+        </div>
         <div className="txt">{money.toLocaleString()} VND</div>
         <div className={`xt ${today_slr > 0 ? "up" : "down"}`}>
-          {`${today_slr > 0 ? "+" : ""}`} {(today_slr).toLocaleString()} vnđ
+          {`${today_slr > 0 ? "+" : ""}`} {today_slr.toLocaleString()} vnđ
         </div>
       </div>
       <div className="user-options">
