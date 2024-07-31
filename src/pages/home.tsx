@@ -64,7 +64,7 @@ const HomePage: React.FunctionComponent = () => {
       <div className="main-body">
         <Suspense>
           <UserSumary />
-          <UserSetup />
+          <UserSetup isDayShift={isDayShift} toggleShift={toggleShift} />
           <div className="white-card">
             <WorksheetBox />
             {/* <Moneybox /> */}
