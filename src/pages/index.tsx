@@ -16,8 +16,8 @@ const botItems: botItemType[] = [
     link: "/home/",
   },
   {
-    icon: <FontAwesomeIcon icon={icon.faGears} />,
-    name: "Thiết lập",
+    icon: <FontAwesomeIcon icon={icon.faMugHot} />,
+    name: "Đi dạo",
     link: "/report/",
   },
   // {
@@ -34,7 +34,6 @@ const botItems: botItemType[] = [
 const HomePage: React.FunctionComponent = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
   return (
     <Page className="main-app">
       <div className="home-body">
